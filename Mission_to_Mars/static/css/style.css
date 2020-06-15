@@ -1,0 +1,18 @@
+
+/* 
+h1{
+    font-weight: bold;
+} */
+
+.row{
+    margin: 30px;
+}
+
+#feature_img{
+    width: 100%;
+    padding: 20px;
+}
+
+p{
+   font-size: 20px; 
+}

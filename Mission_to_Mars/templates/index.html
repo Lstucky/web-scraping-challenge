@@ -1,30 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Mars Data</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-</head>
-
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mars Data</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/style.css"> 
+  </head>
 <body>
   <div class="container-fluid">
     <div class="jumbotron text-center">
-      <h1>Latest Mars News</h1>
-      <p>{{ mars.news_title }}</p>
-      <h3> {{ mars.news_p }}</h3>
+      <h1>Mission to Mars</h1>
       <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get New Data!</a></p>
-      <h1>Featured Mars Image</h1>
-      <img src="{{ mars.featured_image_url }}" alt="Wow Mars!">
+    </div>
+  </div>
+
+    <div class='col-md-12'>    
+      <h1>Latest Mars News</h1>
+      <h3>{{ mars.news_title }}</h3>
+        <p> {{ mars.news_p }}</p>
+    </div>
+
+    <div class="row">
+      <div class='col-md-7'>
+        <div class='card'>
+          <div class='card-body'>
+            <h1>Featured Mars Image</h1>
+            <img id='feature_img' src="{{ mars.featured_image_url }}" alt="Wow Mars!" width= "800px">
+          </div>
+        </div>
+      </div>
+      <div class='col-md-5'>
+        <div class='card'>
+          <div class='card-body'>   
+            <h2>Current Weather on Mars</h2>
+              <p> {{ mars.mars_weather }}</p>
+            <h3>Mars Facts</h3>
+            {{ mars.mars_facts|safe }}
+          </div>
+        </div>
+      </div>
     </div>
     
-    <h2>Current Weather on Mars</h2>
-    <p> {{ mars.mars_weather }}</p>
-    <h3></h3>
-    
-  </div>
+
+    <div class='col-md-12'>
+      <h1>Mars Hemispheres</h1>
+
+
+    </div>
   </div>
 </body>
 
