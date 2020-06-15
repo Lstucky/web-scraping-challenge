@@ -16,6 +16,7 @@ def scrape():
     # news  title and paragraph
     url = 'https://mars.nasa.gov/news/?page=0&per_page=40&order=publish_date+desc%2Ccreated_at+desc&search=&category=19%2C165%2C184%2C204&blank_scope=Latest'
     browser.visit(url)
+    time.sleep(1)
     news_html = bs(browser.html, 'html.parser')
     results1 = news_html.find('ul', class_="item_list")
     news_title = results1.find('div', class_='content_title').text
@@ -74,8 +75,9 @@ def scrape():
     links = []
     title = []
     for l in hemi_html.find_all('a', class_='itemLink'):
+        l['href'] = l['href'].replace('search/map', 'download')
         if l['href'] not in links:
-            links = 'https://astrogeology.usgs.gov/' + l['href'] + '.tif/full.jpg'
+            links = 'https://astropedia.astrogeology.usgs.gov/' + l['href'] + '.tif/full.jpg'
             print(links)
             mars_data['img_url'].append(links)
     for t in hemi_html.select('a.itemLink h3'):

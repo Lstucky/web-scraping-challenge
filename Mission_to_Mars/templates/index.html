@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mars Data</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="../static/css/style.css"> 
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
   </head>
 <body>
   <div class="container-fluid">
@@ -27,7 +27,7 @@
         <div class='card'>
           <div class='card-body'>
             <h1>Featured Mars Image</h1>
-            <img id='feature_img' src="{{ mars.featured_image_url }}" alt="Wow Mars!" width= "800px">
+            <img id='feature_img' src="{{ mars.featured_image_url }}" alt="Wow Mars!">
           </div>
         </div>
       </div>
@@ -43,12 +43,31 @@
       </div>
     </div>
     
-
-    <div class='col-md-12'>
-      <h1>Mars Hemispheres</h1>
-
-
+    <div class="container">
+      <div class="row">
+          <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">Mars Hemispheres</h2>  
+            </div>
+            <div class="box-container">
+                <div class="row">
+                    <div class="col-sm-6">
+                      <h5>{{ mars.img_title[0] }}</h5><img class="fig-grid" src="{{ mars.img_url[0] }}" alt="fig1">
+                    </div>
+                    <div class="col-sm-6">
+                      <h5>{{ mars.img_title[1] }}</h5><img class="fig-grid" src="{{ mars.img_url[1] }}" alt="fig2">
+                    </div>
+                    <div class="col-sm-6">
+                      <h5>{{ mars.img_title[2] }}</h5><img class="fig-grid" src="{{ mars.img_url[2] }}" alt="fig3">
+                    </div>
+                    <div class="col-sm-6">
+                      <h5>{{ mars.img_title[3] }}</h5><img class="fig-grid" src="{{ mars.img_url[3] }}" alt="fig4">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    
   </div>
 </body>
 
