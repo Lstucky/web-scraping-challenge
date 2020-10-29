@@ -14,7 +14,7 @@ I used BeautifulSoup to parse the HTML and splinter to navitage the websites, pu
 4. Fars Facts [here](https://space-facts.com/mars/)
 5. Mars Hemisphere Images [here](https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars)
 
-![mission_to_mars](images/screenshot.png) 
+![mission_to_mars](Mission_to_Mars/images/screenshot.png) 
 
 
 
