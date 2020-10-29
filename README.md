@@ -6,13 +6,20 @@ The objective of this project is to create a dashboard that presents a variety o
 
 ### Dashboard Elements
 
-1. NASA Mars News
-2. JLP Mars Space Images
-3. Mars Weather
-4. Fars Facts
-5. Mars Hemisphere Images
+I used BeautifulSoup to parse the HTML and splinter to navitage the websites, pulling requests from the cooresponding elements.
 
-![mission_to_mars] (images/screenshot.png)
+1. NASA Mars News [NASA Mars News Site](https://mars.nasa.gov/news/)
+2. JLP Mars Space Images [here](https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars)
+3. Mars Weather [here](https://twitter.com/marswxreport?lang=en)
+4. Fars Facts [here](https://space-facts.com/mars/)
+5. Mars Hemisphere Images [here](https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars)
+
+![mission_to_mars](images/iscreenshot.png) 
+
+
+
+
+
 
 
 
